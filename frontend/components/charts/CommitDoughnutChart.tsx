@@ -38,7 +38,7 @@ export function CommitDoughnutChart({ data }: CommitDoughnutChartProps) {
           paddingAngle={3}
           dataKey="value"
           label={({ name, percent }) =>
-            `${name} ${(percent * 100).toFixed(0)}%`
+            `${name} ${(percent ? percent * 100 : 0).toFixed(0)}%`
           }
           labelLine={{ stroke: "rgba(255,255,255,0.2)" }}
         >
